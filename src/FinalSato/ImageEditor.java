@@ -77,10 +77,10 @@ public class ImageEditor
 	public BufferedImage monoImage(BufferedImage image) throws IOException
 	{
 		// Create a ColorSpace object to grayscale
-		ColorSpace cs = ColorSpace.getInstance(ColorSpace.CS_GRAY);
+		ColorSpace colorSpace = ColorSpace.getInstance(ColorSpace.CS_GRAY);
 
 		// Create a ColorConvertOp object using the object above
-		ColorConvertOp colorConverter = new ColorConvertOp(cs, null);
+		ColorConvertOp colorConverter = new ColorConvertOp(colorSpace, null);
 
 		// Create a new BufferedImage object have same width and height
 		// as the original image given with an ARGB color, which is
@@ -160,13 +160,13 @@ public class ImageEditor
 	{
 		// scale image by -1 on the x-direction and 1 in the y-direction, flip
 		// horizontally
-		AffineTransform tx = AffineTransform.getScaleInstance(-1, 1);
+		AffineTransform affineTransform = AffineTransform.getScaleInstance(-1, 1);
 
 		// Translate the width of the image to nagative
-		tx.translate(-image.getWidth(null), 0);
+		affineTransform.translate(-image.getWidth(null), 0);
 
 		// Create an AffineTransformOp object using the object above
-		AffineTransformOp op = new AffineTransformOp(tx,
+		AffineTransformOp op = new AffineTransformOp(affineTransform,
 				AffineTransformOp.TYPE_NEAREST_NEIGHBOR);
 
 		// use filter method of AffineTransformOp generate flipped image and
