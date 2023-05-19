@@ -411,6 +411,7 @@ public class FinalGameMain extends GameBase
 		drawStringCenter("GAMEOVER", 220, g);
 		g.setFont(new Font("SansSerif", Font.BOLD, 30));
 		drawStringCenter("Push R Key To Continue", 280, g);
+		drawStringCenter("Push Q Key To Quit", 320, g);
 	}
 
 	/**

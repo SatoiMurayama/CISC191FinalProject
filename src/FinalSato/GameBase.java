@@ -314,6 +314,10 @@ public abstract class GameBase
 				{
 					invokeStageStart();
 				}
+				if (ev.getKeyCode() == KeyEvent.VK_Q)
+				{
+					System.exit(0);
+				}
 			}
 		}
 
