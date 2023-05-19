@@ -107,7 +107,7 @@ public class ImageManeger
 			player_Image = edit.qualityReduce(player_Image, 2.5);
 
 			enemy_Image_Homing = ImageIO
-					.read(getClass().getResource("HomingEnemy改.png"));
+					.read(getClass().getResource("HomingEnemy.png"));
 			enemy_Image_Homing = edit.monoImage(enemy_Image_Homing);
 			enemy_Image_Homing = edit.qualityReduce(enemy_Image_Homing, 2);
 
